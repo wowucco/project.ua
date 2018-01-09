@@ -6,6 +6,7 @@ $db = require __DIR__ . '/db.php';
 $config = [
     'id' => 'basic',
     'name' => 'VB',
+    'defaultRoute' => 'home/index',
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',
@@ -15,7 +16,7 @@ $config = [
             'cookieValidationKey' => getenv('YII_COOKIE_VALIDATION_KEY'),
         ],
         'errorHandler' => [
-            'errorAction' => 'site/error',
+            'errorAction' => 'home/error',
         ],
         'mailer' => [
             'class' => 'yii\swiftmailer\Mailer',

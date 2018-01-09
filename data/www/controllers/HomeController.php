@@ -4,7 +4,7 @@ namespace app\controllers;
 
 use yii\web\Controller;
 
-class SiteController extends Controller
+class HomeController extends Controller
 {
     /**
      * @inheritdoc
@@ -25,6 +25,7 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
+        $this->layout = 'home';
         return $this->render('index');
     }
 }
