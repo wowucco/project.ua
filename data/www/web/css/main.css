@@ -1,0 +1,119 @@
+.home-page{}
+.home-page .home-index{}
+
+#ps-main-menu {
+    padding: 20px 0;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
+}
+#ps-logo {
+    font-size: 2.2em;
+    color: #2f2f2f;
+    font-weight: 500;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
+}
+#ps-menu-items li a {
+    font-size: 0.9em;
+    color: #2f2f2f;
+    font-weight: 600;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    #ps-logo {
+        font-size: 1.8em;
+    }
+    #ps-menu-items li a{
+        font-size: 0.7em;
+    }
+}
+
+.menu-small {
+    background-color: #eeeeee;
+    border-bottom: 1px solid #b2b2b2;
+    padding: 2px 0!important;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
+}
+.wrap > .container {
+    padding-top: 100px;
+}
+.nav > li > a:hover, .nav > li > a:focus {
+    background-color: transparent;
+}
+.nav > li > a:after{
+    display: block;
+    position: absolute;
+    background-color: #2f2f2f;
+    left: 0;
+    width: 0;
+    height: 0.1em;
+    content: '';
+    -webkit-transition: width 0.3s ease-out;
+    -moz-transition: width 0.3s ease-out;
+    -ms-transition: width 0.3s ease-out;
+    -o-transition: width 0.3s ease-out;
+    transition: width 0.3s ease-out;
+}
+.nav > li > a:hover:after, .nav > li > a:focus:after {
+    width: 100%;
+}
+.nav > .active > a:after {
+    width: 100%!important;
+}
+#ps-main-menu-toggle {
+    position: relative;
+    float: right;
+    padding: 7px 15px;
+    border: none;
+    display: inline-block;
+    cursor: pointer;
+    background: transparent;
+    height: 38px!important;
+}
+@media (min-width: 768px) {
+    #ps-main-menu-toggle {
+        display: none;
+    }
+}
+.line1, .line2, .line3 {
+    width: 30px;
+    height: 3px;
+    background-color: #2f2f2f;
+    margin: 6px 0;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
+}
+.change .line1 {
+    -webkit-transform: rotate(-45deg) translate(-8px, 5px);
+    -moz-transform: rotate(-45deg) translate(-8px, 5px);
+    -ms-transform: rotate(-45deg) translate(-8px, 5px);
+    -o-transform: rotate(-45deg) translate(-8px, 5px);
+    transform: rotate(-45deg) translate(-8px, 5px);
+}
+
+.change .line2 {opacity: 0;}
+
+.change .line3 {
+    -webkit-transform: rotate(45deg) translate(-7px, -5px);
+    -moz-transform: rotate(45deg) translate(-7px, -5px);
+    -ms-transform: rotate(45deg) translate(-7px, -5px);
+    -o-transform: rotate(45deg) translate(-7px, -5px);
+    transform: rotate(45deg) translate(-7px, -5px);
+}
