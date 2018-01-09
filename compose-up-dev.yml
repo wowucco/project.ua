@@ -1,0 +1,37 @@
+version: "3"
+
+services:
+
+  nginx:
+    container_name: project-nginx
+    image: nginx
+    volumes:
+      - ./data/config/nginx/dev:/etc/nginx:ro
+      - ./data/log/nginx:/var/log/nginx
+      - ./data/www:/var/www
+    depends_on:
+      - php
+    ports:
+      - "90:80"
+      - "9043:443"
+    restart: always
+
+  php:
+    container_name: project-php
+    build: php/dev
+    env_file: .env.dev
+    volumes:
+      - ./data/www:/var/www
+    depends_on:
+      - postgres
+    working_dir: /var/www
+
+  postgres:
+    container_name: project-postgresql
+    image: postgres
+    env_file: .env.dev
+    volumes:
+      - ./data/log/postgres:/var/log/postgres
+    ports:
+      - 9032:5432
+    restart: always
